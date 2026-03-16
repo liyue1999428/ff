@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE TRUMP SIGNAL | 2026 REAL-TIME FEED</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --accent: #ff3e3e;
+            --text-main: #e0e0e0;
+            --text-dim: #888;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Vibe Overlay: Scanline Effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 100;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        header {
+            padding: 2rem;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background: var(--surface);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-shadow: 2px 2px 0px #fff;
+        }
+
+        .status-bar {
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .ticker {
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid #333;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 62, 62, 0.1);
+        }
+
+        .tag {
+            background: var(--accent);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        h2 { margin: 1rem 0; font-size: 1.8rem; line-height: 1.2; }
+        p { color: #bbb; margin-bottom: 1rem; }
+
+        .timestamp { font-size: 0.8rem; color: var(--accent); font-weight: bold; }
+
+        .sidebar { border-left: 1px solid #333; padding-left: 2rem; }
+
+        .live-dot {
+            height: 10px;
+            width: 10px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-dim);
+            font-size: 0.7rem;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            main { grid-template-columns: 1fr; }
+            .sidebar { border-left: none; padding-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TRUMP / 2026</div>
+        <div class="status-bar">
+            <div>STATUS: <span style="color: #00ff00;">LIVE_FEED</span></div>
+            <div id="clock">MARCH 16, 2026 - 20:26:11</div>
+        </div>
+    </header>
+
+    <div class="ticker">
+        <div class="ticker-content">
+            +++ 突发：特朗普签署 650 亿美元边境安全法案 +++ 特朗普在双边会议上讨论伊朗出口中心问题 +++ 2026 年美国第一季度 GDP 预测上调 +++ 
+        </div>
+    </div>
+
+    <main>
+        <section class="content">
+            <div class="card">
+                <span class="tag">Breaking</span>
+                <div class="timestamp">08:45 AM // 16 MAR 2026</div>
+                <h2>“这是前所未有的安全”：特朗普称赞国土安全部边境新举措</h2>
+                <p>根据最新的白宫简报，特朗普总统与国土安全部部长诺姆会面，宣布美墨边境已达到“历史上最安全的水平”。</p>
+                <a href="#" style="color: var(--accent); text-decoration: none;">[ 阅读完整电讯 ]</a>
+            </div>
+
+            <div class="card">
+                <span class="tag">Foreign Policy</span>
+                <div class="timestamp">02:12 PM // 15 MAR 2026</div>
+                <h2>特朗普威胁对伊朗核心出口设施进行进一步制裁</h2>
+                <p>在最近的采访中，总统表示对伊朗关键能源港口的影响力正在扩大，并要求盟国在霍尔木兹海峡采取更强硬的立场。</p>
+                <a href="#" style="color: var(--accent); text-decoration: none;">[ 深度分析 ]</a>
+            </div>
+
+            <div class="card">
+                <span class="tag">Economy</span>
+                <div class="timestamp">11:00 AM // 14 MAR 2026</div>
+                <h2>关税新规：最高法院裁决后的行政应对</h2>
+                <p>尽管遭遇法律挑战，总统表示将通过“其他途径”推进针对特定进口商品的贸易调整政策。</p>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <h3 style="margin-bottom: 1.5rem; text-transform: uppercase;"><span class="live-dot"></span> 实时简讯</h3>
+            <div style="font-size: 0.85rem;">
+                <p><strong>[19:20]</strong> 与德国总理进行视频通话...</p>
+                <p><strong>[18:45]</strong> 签署关于促进经济适用房建设的行政命令...</p>
+                <p><strong>[16:30]</strong> 提名新的田纳西河谷管理局成员...</p>
+                <hr style="border: none; border-top: 1px solid #333; margin: 1rem 0;">
+                <p style="color: var(--text-dim);">[ 查看更多历史记录 ]</p>
+            </div>
+            
+            <div class="card" style="margin-top: 3rem; border-style: dashed;">
+                <h4>2026 预测</h4>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem;">地缘政治分析师认为，特朗普的“美洲之盾”计划将重新定义西半球外交格局。</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>SYSTEM_ID: TRUMP_SIGNAL_V3.14 // NO RIGHTS RESERVED. VIBE CODING 2026</p>
+    </footer>
+
+    <script>
+        // 实时时钟更新
+        function updateClock() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('clock').innerText = now.toLocaleString('zh-CN', options).toUpperCase();
+        }
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
